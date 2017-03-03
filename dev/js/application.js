@@ -3,13 +3,13 @@ global.jQuery = require('jquery');
 global.$ = jQuery;
 
 // Modules
-var module = require('./modules/module')();
+var nav = require('./modules/nav')();
 
 // Bootstrapping
 $(function() {
 
     "use strict";
 
-    module.init();
+    nav.init();
 
 });

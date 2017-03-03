@@ -1,0 +1,32 @@
+
+
+
+.firstBlock {
+    @include outer-container;
+    height: 100%;
+    background-color: #000;
+    .primaryLeft {
+        @include span-columns(8, block-collapse);
+        height: 200px;
+        background-color: orange;
+        @include media($mobile) {
+        @include span-columns(4);
+        }
+        @include media($desktop) {
+            @include span-columns(8);
+        }
+    // .block {
+    //     @include span-columns(4 of 8);
+    //     height: 200px;
+    //     background-color: blue;
+    // }
+}
+
+.primaryRight {
+    @include span-columns(4);
+    height: 200px;
+    background-color: green;
+}
+
+
+}

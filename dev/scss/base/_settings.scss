@@ -1,0 +1,24 @@
+//colours 
+
+$black: #000000;
+$white: #ffffff;
+$green: #53ff1a;
+$red: #ff3300;
+$teal: #009999;
+
+//font-size 
+
+$base__font-size: 16px;
+
+
+//responsive
+
+$largeDesktop: new-breakpoint(max-width 1200px);
+$desktop: new-breakpoint(max-width 1080px);
+$tabletLandscape: new-breakpoint(max-width 1024px);
+$tabletPortrait: new-breakpoint(max-width 768px);
+$phone-landscape-large: new-breakpoint(max-width 670px);
+$phone-portrait-large: new-breakpoint(max-width 480px);
+$phone-portrait-small: new-breakpoint(max-width 320px);
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 850px);
