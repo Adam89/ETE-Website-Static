@@ -21,6 +21,8 @@ function nav() {
                 mobileNav.style.display = 'none';
             }
         });
+
+
     };
 
 

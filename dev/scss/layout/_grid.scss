@@ -1,32 +1,50 @@
+.social {
+    @include outer-container(100%);
+    height: 100%;
+    background-color: $white;
+    &__WrapperOuter {
+        @include span-columns(12);
 
+        &--facebook {
+            @include span-columns(4 of 12, block-collapse);
+            background-color: $yellow;
 
-
-.firstBlock {
-    @include outer-container;
+            margin: 10px;
+            width: calc(34.1192173411% - 30px);
+        }
+        &--twitter {
+            @include span-columns(4 of 12, block-collapse);
+            background-color: red;
+            height: 200px;
+            margin: 10px;
+            width: calc(34.1192173411% - 30px);
+        }
+        &--insta {
+            @include span-columns(4 of 12, block-collapse);
+            background-color: green;
+            height: 200px;
+            margin: 10px;
+            width: calc(34.1192173411% - 30px);
+        }
+    }
+}
+.videoAndGigs {
+    @include outer-container(100%);
     height: 100%;
     background-color: #000;
-    .primaryLeft {
-        @include span-columns(8, block-collapse);
+    &__WrapperOuter {
+        @include span-columns(12);
         height: 200px;
-        background-color: orange;
-        @include media($mobile) {
-        @include span-columns(4);
+        &--videoPane {
+            @include span-columns(8 of 12, block-collapse);
+            background-color: orange;
+            height: 200px;
         }
-        @include media($desktop) {
-            @include span-columns(8);
+        &--gigs {
+            @include span-columns(4 of 12, block-collapse);
+            background-color: yellow;
+            height: 200px;
         }
-    // .block {
-    //     @include span-columns(4 of 8);
-    //     height: 200px;
-    //     background-color: blue;
-    // }
+    }
 }
 
-.primaryRight {
-    @include span-columns(4);
-    height: 200px;
-    background-color: green;
-}
-
-
-}
