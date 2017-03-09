@@ -10,12 +10,10 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="./css/app.css">
+    <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-
-
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -44,31 +42,44 @@
     </div>
     <section id="hero" class="homeHero">
     </section>
-    <section class="social">
-
-        <article class="social__WrapperOuter">
-            <div class="social__WrapperOuter--facebook">
-                <h1>Facebook</h1>
-                <div class="social-feed-container"></div>
-
-            </div>
-            <div class="social__WrapperOuter--twitter">
-                <h1>Twitter</h1>
-            </div>
-            <div class="social__WrapperOuter--insta">
-                <h1>Instagram</h1>
-            </div>
-        </article>
-    </section>
     <section class="videoAndGigs">
         <article class="videoAndGigs__WrapperOuter">
             <div class="videoAndGigs__WrapperOuter--videoPane">
+                <div class="videoWrapper">
+                    <!-- Copy & Pasted from YouTube -->
+                    <iframe src="https://www.youtube.com/embed/E2pSD5XltGs" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="videoAndGigs__WrapperOuter--gigs">
+            <h1>Gigs</h1>
+            <ul>
+                <li>Gig 1</li>
+                <li>Gig 2</li>
+                <li>Gig 3</li>
+                <li>Gig 4</li>
+                <li>Gig 5</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+    <section class="social">
+        <article class="social__WrapperOuter">
+            <div class="social__WrapperOuter--facebook">
+                <h1>Facebook</h1>
+                <ul class="juicer-feed" data-feed-id="eattheevidenceband"></ul>
+            </div>
+            <div class="social__WrapperOuter--twitter">
+                <h1>Twitter</h1>
+                <ul class="juicer-feed" data-feed-id="eatthee"></ul>
+            </div>
+            <div class="social__WrapperOuter--insta">
+                <h1>Instagram</h1>
+                <ul class="juicer-feed" data-feed-id="eattheevidence"></ul>
             </div>
         </article>
     </section>
     <script src="./js/application.js"></script>
 </body>
+<script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
 
 </html>
