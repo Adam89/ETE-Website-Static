@@ -1,7 +1,12 @@
+body {
+	font-family: $spray;
+	background-color: tint($black,20%);
+}
 h1 {
 font-weight: bold;
 text-align: center;
 color:$grey;
+font-size: em(50px);
 }
 ul {
     list-style-type: none;

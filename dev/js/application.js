@@ -9,7 +9,7 @@ global.$ = jQuery;
 
 // Modules
 var nav = require('./modules/nav')();
-var nav = require('./modules/social')();
+var social = require('./modules/social')();
 
 // Bootstrapping
 $(function() {

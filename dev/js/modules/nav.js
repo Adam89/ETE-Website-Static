@@ -10,9 +10,7 @@ function nav() {
         var hamburger = document.querySelector('.wrapper__hamburger');
         var mobileNav = document.querySelector('.mobileNav');
 
-
         hamburger.addEventListener('click', function() {
-
             if (mobileNav.style.display == 'none') {
                 event.preventDefault();
                 mobileNav.style.display = 'block';

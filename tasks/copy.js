@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     src: [
                         '*.html',
                         'images/{,*/}*.{png,jpg,gif,svg}',
-                        'fonts/*.{woff,woff2}',
+                        'fonts/*.{woff,woff2,eot,svg,ttf,otf}',
                         'libs/*',
                     ],
                     dest: 'dist'

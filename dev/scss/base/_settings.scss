@@ -26,9 +26,22 @@ $phone-portrait-small: new-breakpoint(max-width 320px);
 $mobile: new-breakpoint(max-width 480px);
 $desktop: new-breakpoint(min-width 850px);
 
+// fonts
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "PhillySans-Regular";
+  src: url("/fonts/PhillySans.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/PhillySans.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/fonts/PhillySans.otf") format("opentype"), /* Open Type Font */
+    url("/fonts/PhillySans.svg") format("svg"), /* Legacy iOS */
+    url("/fonts/PhillySans.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/fonts/PhillySans.woff") format("woff"), /* Modern Browsers */
+    url("/fonts/PhillySans.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
 
-
-// grid settings 
+$spray: "PhillySans-Regular";
 
 
 
