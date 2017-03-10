@@ -1,0 +1,22 @@
+.videoAndGigs {
+    @include outer-container();
+    @include align-items(stretch);
+     @include display(flex);
+    padding-top:em(30px);
+        &__videoPane {
+            @include span-columns(8);
+            background-color: green;
+            height: 100%;
+        }
+        &__gigs {
+            @include span-columns(4);
+            background-color: yellow;
+            min-height: 100%;
+            ul {
+                margin-left: 20px;
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+    }

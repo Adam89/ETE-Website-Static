@@ -1,0 +1,18 @@
+.social {
+    @include outer-container();
+    height: 100%;
+    padding-top:em(30px);
+    background-color: $white;
+        &__facebook {
+            @include span-columns(4);
+            background-color: $yellow;
+        }
+        &__twitter {
+            @include span-columns(4);
+            background-color: red;
+        }
+        &__insta {
+            @include span-columns(4);
+            background-color: green;
+        }
+    }
