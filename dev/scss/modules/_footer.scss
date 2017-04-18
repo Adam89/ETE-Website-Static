@@ -1,0 +1,15 @@
+.simpleFooter {
+	@include outer-container(100%);
+	height:auto;
+	margin-top:em(10px);
+	&__title {
+		color:$white;
+		@include span-columns(12);
+		text-align: center;
+		p {
+			font-size: em(20px);
+			margin: 0px;
+			padding: 0px;
+		}
+	}
+}
