@@ -2,14 +2,20 @@
 	@include outer-container(100%);
 	height:auto;
 	margin-top:em(10px);
+	background-color:$white;
 	&__title {
-		color:$white;
+		color:$black;
 		@include span-columns(12);
 		text-align: center;
 		p {
 			font-size: em(20px);
 			margin: 0px;
 			padding: 0px;
+			text-align: center;
 		}
 	}
+	img {
+			@include display(block);
+			margin:0px auto;
+		}
 }

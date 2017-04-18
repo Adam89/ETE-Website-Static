@@ -2,73 +2,68 @@
     @include outer-container(100%);
     height: 100%;
     padding-top: em(30px);
+    @include media($phone-landscape-large) {
+        @include display(none);
+    }
+    img {
+        @include display(block);
+        margin: 0px auto;
+        padding-bottom: 10px;
+    }
     &__facebook {
         @include span-columns(4);
         background-color: $yellow;
-        @include media($phone-landscape-large) {
-            @include display(none);
-        }
     }
     &__twitter {
         @include span-columns(4);
         background-color: red;
-        @include media($phone-landscape-large) {
-            @include display(none);
-        }
     }
     &__insta {
         @include span-columns(4);
         background-color: green;
-        @include media($phone-landscape-large) {
-            @include display(none);
-        }
     }
-    .block {
-        @include flex-direction(row);
-        @include display(flex);
-        @include justify-content(space-around)
-        @include span-columns(12);
-        @include flex-flow(row wrap);
-        &__tile {
-            border: 2px solid #000;
-            margin: em(10px);
-            @include flex-grow(1);
-            max-width: 300px;
-            height: 220px;
-            @include span-columns(4);
+}
 
-            &:hover {
-                transform: scale(1.1);
-            }
-            &--colour {
-                background-color: orange;
-                opacity: 0.75;
-            }
-            &--colour1 {
-                background-color: orange;
-                opacity: 0.75;
-            }
-            &--colour2 {
-                background-color: orange;
-                opacity: 0.75;
-            }
-            h1 {
-                padding-top: 50px;
-                padding-bottom: 50px;
-                font-size: em(60px);
-                color: $white;
-                // font-family: $drip;
-            }
-            p {
-                font-size: em(28px);
-                text-decoration: underline;
-                // font-family: $drip;
-                margin: em(2px);
-                // @media (max-width: 768px) {
-                //     font-size: em(22px);
-                //     padding-top: 2px;
-                // }
-            }
+.block {
+    @include outer-container();
+    @include display(none);
+    @include media($phone-landscape-large) {
+        @include display(flex);
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include flex-flow(row wrap);
+    }
+    &__tile {
+        @include span-columns(12, block-collapse);
+        border: 2px solid #000;
+        @include flex-grow(1);
+        margin: 10px;
+        max-width: 300px;
+        height: 220px;
+        background-color: red;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &--colour {
+            opacity: 0.75;
+        }
+        &--colourOne {
+            opacity: 0.75;
+        }
+        &--colourTwo {
+            opacity: 0.75;
+        }
+        h1 {
+            font-size: em(60px);
+            color: $black;
+            background-color: $white
+        }
+        p {
+            font-size: em(22px);
+            text-decoration: underline;
+            // font-family: $drip;
+            text-align: center;
+            margin: em(2px);
         }
     }
 }

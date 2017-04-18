@@ -1,70 +1,70 @@
 .wrapper {
-    background: shade($purple,50%);
+    background: shade($purple, 50%);
+    @include outer-container();
     margin: 0;
     white-space: nowrap;
     width: 100%;
-    height: 100px;
     justify-content: space-around;
     display: inline-flex;
-    padding: em(10px);
+    padding: em(20px);
     &__logo {
-        background-image: url("/images/ETE_Logo.png");
-        background-repeat: no-repeat;
-        width: 90%;
-        background-position: em(5px);
-        @media (max-width: 670px) {}
-    }
-    &__copy {
-        width: 49%;
-            font-size: em(25px);
-        @media (max-width: 670px) {
-            display: none;
+        @include span-columns(12, block-collapse);
+        img {
+            @include display(block);
+            margin:0px auto;
         }
     }
-    &__hamburger {
-        display: none;
-        @media (max-width: 670px) {
-            background-image: url("/images/menu.png");
-            background-repeat: no-repeat;
-            display: block;
-            color: #fff;
-            width: 10%;
-            background-position: 99% center;
-        }
-    }
-    ul {
-        padding: 0px;
-        list-style-type: none;
-        li {
-            color: #fff;
-            display: inline-block;
-            margin: em(15px);
-            text-decoration: underline;
-            font-weight: bold;
-            width: 12.2%;
-            text-align: center;
-        }
-    }
+    // &__copy {
+    //     width: 49%;
+    //         font-size: em(25px);
+    //     @media (max-width: 670px) {
+    //         display: none;
+    //     }
+    // }
+    // &__hamburger {
+    //     display: none;
+    //     @media (max-width: 670px) {
+    //         background-image: url("/images/menu.png");
+    //         background-repeat: no-repeat;
+    //         display: block;
+    //         color: #fff;
+    //         width: 10%;
+    //         background-position: 99% center;
+    //     }
+    // }
+    // ul {
+    //     padding: 0px;
+    //     list-style-type: none;
+    //     li {
+    //         color: #fff;
+    //         display: inline-block;
+    //         margin: em(15px);
+    //         text-decoration: underline;
+    //         font-weight: bold;
+    //         width: 12.2%;
+    //         text-align: center;
+    //     }
+    // }
 }
 
-.mobileNav {
-    width: 100%;
-    display: none;
-    background-color:$white;
-    ul {
-        white-space: nowrap;
-        border: 3px solid red;
-        font-size: em(20px);
-        @media (max-width: 670px) {
-            font-size: em(16px);
-        }
-        li {
-            display: inline-block;
-            width: 23%;
-            margin: 0px;
-            padding: 0px;
-            text-align: center;
-            font-weight: bold;
-        }
-    }
-}
+// .mobileNav {
+//     width: 100%;
+//     display: none;
+//     background-color:$white;
+//     ul {
+//         white-space: nowrap;
+//         border: 3px solid red;
+//         font-size: em(20px);
+//         @media (max-width: 670px) {
+//             font-size: em(16px);
+//         }
+//         li {
+//             display: inline-block;
+//             width: 23%;
+//             margin: 0px;
+//             padding: 0px;
+//             text-align: center;
+//             font-weight: bold;
+//         }
+//     }
+// }

@@ -1,0 +1,6 @@
+.moreVideos {
+    @include outer-container();
+    &__tiles {
+        @include span-columns(3);
+    }
+}
