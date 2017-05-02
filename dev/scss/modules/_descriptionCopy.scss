@@ -1,0 +1,11 @@
+.description {
+    color: $white;
+    &--copy {
+        text-align: center;
+        font-size: em(25px);
+        h1 {
+        	color:$white;
+        	margin:5px;
+        }
+    }
+}

@@ -1,7 +1,26 @@
 .moreVideos {
-	text-align:center;
-	padding:20px;
-	img {
-		margin:0px auto;
-	}
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    ul {
+        li {
+            display: inline-block;
+            width: 25%;
+            margin: 0px;
+            padding: 10px;
+            @include media($tabletPortrait) {
+                width: 50%;
+            }
+             @include media($phone-portrait-large) {
+                width: 100%;
+            }
+        }
+    }
+    img {
+        margin: 0px auto;
+        display: block;
+    }
+    a {
+        font-size: 20px;
+    }
 }

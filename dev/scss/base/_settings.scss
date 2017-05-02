@@ -19,6 +19,7 @@ $base__font-size: 16px;
 $largeDesktop: new-breakpoint(max-width 1200px);
 $desktop: new-breakpoint(max-width 1080px);
 $tabletLandscape: new-breakpoint(max-width 1024px);
+$tabletPortraitVideos: new-breakpoint(max-width 840px);
 $tabletPortrait: new-breakpoint(max-width 768px);
 $phone-landscape-large: new-breakpoint(max-width 670px);
 $phone-portrait-large: new-breakpoint(max-width 480px);

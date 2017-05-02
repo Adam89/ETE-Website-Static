@@ -20,7 +20,12 @@
         text-align: center;
         @include media($phone-landscape-large) {
             @include span-columns(12);
+            padding:20px;
 
+        }
+        img {
+            height: 100%;
+            width: 100%;
         }
     }
 }
