@@ -2,7 +2,9 @@
     @include outer-container(100%);
     @include align-items(stretch);
     @include display(flex);
-    padding-top: em(15px);
+    background-color: shade($purple, 50%);
+
+    padding: em(10px);
     @include media($phone-landscape-large) {
         @include display(block);
     }

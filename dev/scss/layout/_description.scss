@@ -1,6 +1,6 @@
 .description {
 	@include outer-container(100%);
 	&--copy {
-		        @include span-columns(12);
+		@include span-columns(12);
 	}
 }

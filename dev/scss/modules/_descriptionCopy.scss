@@ -1,11 +1,17 @@
 .description {
-    color: $white;
+    color: $black;
+    background-color:$white;
     &--copy {
         text-align: center;
         font-size: em(25px);
         h1 {
-        	color:$white;
         	margin:5px;
+        	 @include media($tabletPortrait) {
+        	 	font-size: em(40px);
+        	 }
+        	 @include media($phone-portrait-large) {
+        	 	font-size: em(25px);
+        	 }
         }
     }
 }

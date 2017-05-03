@@ -8,7 +8,6 @@ global.$ = jQuery;
 
 
 // Modules
-var nav = require('./modules/nav')();
 var social = require('./modules/social')();
 
 // Bootstrapping
@@ -16,6 +15,6 @@ $(function() {
 
     "use strict";
 
-    nav.init();
+    social.init();
 
 });

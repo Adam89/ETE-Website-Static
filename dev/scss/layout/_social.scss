@@ -1,6 +1,8 @@
 .social {
     @include outer-container(100%);
+    background-color: shade($purple, 50%);
     height: 100%;
+    padding:em(10px);
     @include media($phone-landscape-large) {
         @include display(none);
     }
@@ -12,14 +14,17 @@
     &__facebook {
         @include span-columns(4);
         background-color: $yellow;
+        padding:em(5px);
     }
     &__twitter {
         @include span-columns(4);
         background-color: red;
+        padding:em(5px);
     }
     &__insta {
         @include span-columns(4);
         background-color: green;
+        padding:em(5px);
     }
 }
 
@@ -31,6 +36,8 @@
         @include flex-direction(row);
         @include justify-content(center);
         @include flex-flow(row wrap);
+        background-color: shade($purple, 50%);
+        padding:em(10px);
     }
     &__tile {
         @include span-columns(12, block-collapse);
@@ -38,8 +45,8 @@
         @include flex-grow(1);
         margin: 10px;
         max-width: 300px;
-        height: 220px;
-        background-color: red;
+        height: 150px;
+        background-color: tint($grey, 50%);
         &:hover {
             transform: scale(1.1);
         }
@@ -53,15 +60,16 @@
             opacity: 0.75;
         }
         h1 {
-            font-size: em(60px);
-            color: $black;
-            background-color: $white
+            font-size: em(40px);
+            color: $white;
+            background-color: shade($purple, 10%);
         }
         p {
             font-size: em(22px);
             text-decoration: underline;
             text-align: center;
             margin: em(2px);
+
         }
     }
 }

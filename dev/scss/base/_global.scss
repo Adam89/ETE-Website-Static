@@ -1,12 +1,14 @@
 body {
 	font-family: $spray;
-	background-color: tint($black,20%);
+	//
 }
 h1 {
 font-weight: bold;
 text-align: center;
-color:$grey;
+color:$black;
 font-size: em(50px);
+letter-spacing: em(2px);
+@extend %decor;
 }
 ul {
     list-style-type: none;
@@ -14,7 +16,8 @@ ul {
     padding: em(0px);
 }
 a {
-    @include links($white, $green, $red, $yellow);
+    @include links($white, $grey, $blue, $yellow);
+    cursor: pointer;
 }
 video {
   width: 100%    !important;
