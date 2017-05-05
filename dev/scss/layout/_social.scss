@@ -2,7 +2,7 @@
     @include outer-container(100%);
     background-color: shade($purple, 50%);
     height: 100%;
-    padding:em(10px);
+    padding: em(10px);
     @include media($phone-landscape-large) {
         @include display(none);
     }
@@ -14,17 +14,17 @@
     &__facebook {
         @include span-columns(4);
         background-color: $yellow;
-        padding:em(5px);
+        padding: em(5px);
     }
     &__twitter {
         @include span-columns(4);
         background-color: red;
-        padding:em(5px);
+        padding: em(5px);
     }
     &__insta {
         @include span-columns(4);
         background-color: green;
-        padding:em(5px);
+        padding: em(5px);
     }
 }
 
@@ -37,7 +37,7 @@
         @include justify-content(center);
         @include flex-flow(row wrap);
         background-color: shade($purple, 50%);
-        padding:em(10px);
+        padding: em(10px);
     }
     &__tile {
         @include span-columns(12, block-collapse);
@@ -69,7 +69,6 @@
             text-decoration: underline;
             text-align: center;
             margin: em(2px);
-
         }
     }
 }

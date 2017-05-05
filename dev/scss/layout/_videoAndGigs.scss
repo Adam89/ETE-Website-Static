@@ -3,7 +3,6 @@
     @include align-items(stretch);
     @include display(flex);
     background-color: shade($purple, 50%);
-
     padding: em(10px);
     @include media($phone-landscape-large) {
         @include display(block);
@@ -14,7 +13,6 @@
         height: 100%;
         @include media($phone-landscape-large) {
             @include span-columns(12);
-
         }
     }
     &__gigs {
@@ -22,8 +20,7 @@
         text-align: center;
         @include media($phone-landscape-large) {
             @include span-columns(12);
-            padding:20px;
-
+            padding: 20px;
         }
         img {
             height: 100%;
