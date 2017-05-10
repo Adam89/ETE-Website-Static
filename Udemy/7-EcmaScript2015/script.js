@@ -21,6 +21,10 @@ new way of creating IIFES using the concepts of block scoped a block can also be
 
 
 4.Arrow Functions
+
+
+
+
 5.Destructuring
 6.Arrays
 7. The spread operator
@@ -167,19 +171,40 @@ console.log(`${firsNameString} `.repeat(5)); // repeats 5 times
 
 
 
+//4. Arrow Functions
+
+
+const years = [1990,1965,1982,1937];
 
 
 
+//es5
+
+var ages5 = years.map(function(el){
+
+    return 2016 -el;
+
+});
+
+console.log(ages5);
 
 
+// ES6
 
+let ages6 = years.map(el => 2016 - el); // this is the same as ES5 above simplest method
 
+console.log(ages6);
 
+let ages7 = years.map((el, index) =>` Age Element ${index + 1}: ${2016 - el}.`); // two arguments have to be wrapped in brackets with no return
 
+console.log(ages7);
 
-
-
-
+let ages8 = years.map((el,index) => { // if we add more lines of code we need to have a return statement
+    const now = new Date().getFullYear();
+    const age = now - el ;
+    return ` Age Element ${index + 1}: ${age}.`;
+});
+console.log(ages8);
 
 
 
