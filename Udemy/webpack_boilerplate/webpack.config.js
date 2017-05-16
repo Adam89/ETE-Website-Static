@@ -21,17 +21,19 @@ const config = {
 			})
 		},
 		{
-			test: /\.(jpe?g|png|gig|svg)$/, // image extension pipeline
+			test: /\.(jpe?g|png|gif|svg)$/, // image extension pipeline
 			use: [
 				{
-					loader:'url-loader',
-					options: {limit: 40000} // look for any images 40kb large save as seprate file otherwise include in bundle js output
+					loader:'image-webpack-loader?'
 				},
-				'image-webpack-loader'
-				]
-			}
-		]
-	},
+				{
+					loader:'url-loader',
+					options: {limit: 400000} // look for any images 40kb large save as seprate file otherwise include in bundle js output
+				},
+			]
+		}
+	]
+},
 	plugins: [
 		new ExtractTextPlugin('css/styles.css')
 	]

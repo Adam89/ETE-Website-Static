@@ -1,5 +1,5 @@
-import big from '../assets/big.jpg';
-import small from '../assets/small.jpg';
+import big from './images/big.jpg';
+import small from './images/small.jpg';
 import './scss/app.scss'; // anything non js needs file extension
 
 
