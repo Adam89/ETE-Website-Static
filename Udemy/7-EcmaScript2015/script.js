@@ -333,63 +333,63 @@ the this keyword of the function they are written in. So we say they have a LEXI
 
 //ES6 destructure a data structure
 
-//Array
-const [name,age] = ['john', 26];
-console.log(name);
-console.log(age);
+// //Array
+// const [name,age] = ['john', 26];
+// console.log(name);
+// console.log(age);
 
-const obj = {
-    firstName: 'John',
-    lastName: 'Smith'
-};
+// const obj = {
+//     firstName: 'John',
+//     lastName: 'Smith'
+// };
 
-const {firstName,lastName} = obj;
+// const {firstName,lastName} = obj;
 
-console.log(firstName);
-console.log(lastName);
+// console.log(firstName);
+// console.log(lastName);
 
-const {firstName: a, lastName:b} = obj;
+// const {firstName: a, lastName:b} = obj;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-function calcAgeRetirement(year) { // good use of destructureing
-    const age2 = new Date().getFullYear() - year;
-    return [age2,65 - age2];
-}
-
-
-const [age2,retirement] = calcAgeRetirement(1990);
-console.log(age2);
-console.log(retirement);
+// function calcAgeRetirement(year) { // good use of destructureing
+//     const age2 = new Date().getFullYear() - year;
+//     return [age2,65 - age2];
+// }
 
 
-
-
-//ES6 arrays new methods and loops
+// const [age2,retirement] = calcAgeRetirement(1990);
+// console.log(age2);
+// console.log(retirement);
 
 
 
-const boxes = document.querySelectorAll('.box'); // returns node list
 
-//ES5
-
-var boxesArr5 = Array.prototype.slice.call(boxes); // converts boxes to an array allows us to use array methods
-
-console.log(boxes);
-
-console.log(boxesArr5);
-
-boxesArr5.forEach( function(element) {
-    element.style.backgroundColor = 'dodgerblue';
-});
+// //ES6 arrays new methods and loops
 
 
-//ES6
 
-const boxesArr6 = Array.from(boxes); // simply transforms a node list to array
+// const boxes = document.querySelectorAll('.box'); // returns node list
 
-Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
+// //ES5
+
+// var boxesArr5 = Array.prototype.slice.call(boxes); // converts boxes to an array allows us to use array methods
+
+// console.log(boxes);
+
+// console.log(boxesArr5);
+
+// boxesArr5.forEach( function(element) {
+//     element.style.backgroundColor = 'dodgerblue';
+// });
+
+
+// //ES6
+
+// const boxesArr6 = Array.from(boxes); // simply transforms a node list to array
+
+// Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 
 
 
@@ -409,36 +409,36 @@ Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 //ES6 the for of combines the parts of for each and for loop
 
 
-for (const cur of boxesArr6) {
-    if (cur.className.includes('blue')) {
-        continue; // break stops the loops
-    }
-    cur.textContent = 'I changed to blue!';
-}
+// for (const cur of boxesArr6) {
+//     if (cur.className.includes('blue')) {
+//         continue; // break stops the loops
+//     }
+//     cur.textContent = 'I changed to blue!';
+// }
 
-// ES5
-
-
-var ages = [12,17,8,21,14,11];
-
-var full = ages.map(function(cur){
-    return cur >= 18;
-});
-
-console.log(full);
-console.log(full.indexOf(true));
-console.log(ages[full.indexOf(true)]);
+// // ES5
 
 
+// var ages = [12,17,8,21,14,11];
 
-//ES6 FindIndex and Find methods of arrays
+// var full = ages.map(function(cur){
+//     return cur >= 18;
+// });
+
+// console.log(full);
+// console.log(full.indexOf(true));
+// console.log(ages[full.indexOf(true)]);
 
 
-// FindIndex pass a callback function and then its going to return the index of the array of the callback function returns true
 
-console.log(ages.findIndex(cur => cur >= 18)); // return the index for the element that returns true
+// //ES6 FindIndex and Find methods of arrays
 
-console.log(ages.find(cur => cur >= 18)); // find and return the value of the element from the array based on the conditional statement.
+
+// // FindIndex pass a callback function and then its going to return the index of the array of the callback function returns true
+
+// console.log(ages.findIndex(cur => cur >= 18)); // return the index for the element that returns true
+
+// console.log(ages.find(cur => cur >= 18)); // find and return the value of the element from the array based on the conditional statement.
 
 
 
@@ -449,37 +449,310 @@ console.log(ages.find(cur => cur >= 18)); // find and return the value of the el
 
 
 
-function addFourAges (a,b,c,d) {
-    return a + b + c + d;
-}
+// function addFourAges (a,b,c,d) {
+//     return a + b + c + d;
+// }
 
-var sum1 = addFourAges(18,38,12,21);
+// var sum1 = addFourAges(18,38,12,21);
 
-console.log(sum1);
+// console.log(sum1);
+
+// //ES5
+
+// var ages = [18,38,12,21];
+
+
+// var sum2 = addFourAges.apply(null, ages); // apply allows us to use the ages array as the arguments in the fourages function
+
+// console.log(sum2);
+
+// //ES6
+
+// const sum3 = addFourAges(...ages); // spread operator ... allows us to use the values of an array as an argument it expands the array
+// console.log(sum3);
+
+
+
+// const familyAdam = ['John', 'Bob', 'Tom'];
+
+// const familySam = ['Rupert', 'Adam', 'Miles'];
+
+// const bigFamily = [...familyAdam, 'lily', ...familySam];
+
+// console.log(bigFamily);
+
+
+// //can use on a node list too
+
+// const head = document.querySelector('h1');
+// const boxes = document.querySelectorAll('.box');
+// const all = [head, ...boxes];
+
+
+// console.log(head);
+// console.log(boxes);
+// console.log(all);
+
+
+// Array.from(all).forEach(cur => cur.style.color = 'purple');
+
+// console.log(all);
+
+
+
+// //Rest Parameters allow us to pass a number of arguments into a function they use the same notation as spread operator but they are completely opposite. Spread operator takes an array and transforms it into single values. While rest parameters takes in single values and transforms it into an array when we call a function with multiple parameters.
+
+//The spread operator is used in the function call whereas the rest parameter is used in the function declaration
+
+
 
 //ES5
 
-var ages = [18,38,12,21];
+// function isFullAge5(limit) { // if we want to receive undefined number of arguments we don't put parameters and just use arguments
+//     // console.log(arguments); // special variable we have acess to inside functions
+
+//     var argsArr = Array.prototype.slice.call(arguments, 1); //passing in as many arguments as we want converts arguments to an array allows us to slice the parameter above from the array to remove it from the function call
+
+//     console.log(argsArr);
 
 
-var sum2 = addFourAges.apply(null, ages); // apply allows us to use the ages array as the arguments in the fourages function
+//     argsArr.forEach(function(cur){
+//         console.log((2016- cur) >= limit);
+//     });
+// }
 
-console.log(sum2);
+
+// isFullAge5(21,1990,1999,1965,2005,1943); // would work with 100 arguments or more
+
+
+
+
+
 
 //ES6
 
-const sum3 = addFourAges(...ages); // spread operator ... allows us to use the values of an array as an argument it expands the array
-console.log(sum3);
+// function isFullAge6(limit, ...years) { // rest parameter transforms years into an array and allows us to pass in parameters easier
+//     // console.log(years);
+
+//     years.forEach(cur => console.log(( 2016 - cur ) >= limit));
+// }
+
+// isFullAge6(14, 1990,1999,1965,2005,1943);
 
 
 
-const familyAdam = ['John', 'Bob', 'Tom'];
+//default parameters: we use them when we want one or more parameters of a function to be preset so we want them to have a default values
 
-const familySam = ['Rupert', 'Adam', 'Miles'];
 
-const bigFamily = [...familyAdam, 'lily', ...familySam];
 
-console.log(bigFamily);
+//ES5
+
+
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+
+	lastName === undefined ? lastName = ' Smith': lastName = lastName // if lastName undefined change to smith as a default parameter
+	nationality === undefined ? nationality = 'British': nationality = nationality; // if nationality undefined change to british as a default parameter
+
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.yearOfBirth = yearOfBirth;
+	this.nationality = nationality;
+
+}
+
+//es6
+
+
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'Welsh') { // call default parameters in the declaration
+
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.yearOfBirth = yearOfBirth;
+	this.nationality = nationality;
+
+	}
+
+	var john = new SmithPerson('John', 1990); // only called 2 property because we used 2 parameters
+
+	console.log(john);
+
+	var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
+
+	console.log(emily);
+
+
+
+// MAPS JS objects can be used as hash map we match string keys to arbitrary values. we mapped values to them but we mapped objects we were limited to strings . But now we use maps and can attach any primitive value to them strings numbers booleans and functions or objects as keys.
+
+// you can iterate through maps but you can't through objects for each method is in the prototype function of the map function constructor maps inherit that method and can use it
+//ES5
+
+const question = new Map();
+
+question.set('question', 'What is the offical name of the leatest major javascript version?'); // key, value
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'correct answer');
+question.set(false, 'Wrong');
+
+// console.log(question);
+
+
+
+console.log(question.get('question')); // get the key
+// console.log(question.size); // gets the size
+// console.log(question.delete(4)); // get the key
+// // question.clear(); //clear everything
+
+
+// if (question.has(3)) {
+// 	console.log('question 3 is here '); // get the key and delete
+// }
+
+// console.log(question);
+
+// question.forEach((value,key) => console.log(`this is ${key}, and its set to ${value}`)); //acrss to current el key and map looping throughing a map
+
+//also use forOF loop
+
+// for (let [key,value] of question.entries()) { //returns all entries of our questons map this is destructuring entires method reutns all the key values pair allowing us to store keys and values in two seperate variables
+// console.log(`this is ${key}, and its set to ${value}`);
+// }
+
+
+// for (let [key,value] of question.entries()) { // only want to print the questions if there certain data type
+
+// 	if (typeof(key) === 'number' ) { // if key is a number
+
+// 		console.log(`Answer ${key}: ${value}`);
+
+// 		}
+// }
+
+
+// const answer = parseInt(prompt('Write the correct answer')); // could write if else if it was an object but a map allows us to shorten code to below
+// console.log(question.get(answer ===
+// question.get('correct'))); // if anwswer true get string for true if false it will auto get false string
+
+
+
+
+//maps are better because we can use anything as keys and maps are iterable so they are easy to loop through and manipulate data with them and then its also good to get the size of the map really easy with the method and the remove the method so all choose a map if we want to a hash map
+
+
+
+//classes are synthetic sugar over the way we implement inheritance and allow us to create object ES5 are function constructors and we added a methods to their prototype property in order to make all the instanced created through the function constructor inherit they methods
+//stactic method are attach to the class but not inherited by object instances
+
+//ES5
+
+// var Person5 = function Person(name, yearOfBirth, job) { //written as function expression
+
+// 	this.name = name;
+// 	this.yearOfBirth = yearOfBirth;
+// 	this.job = job;
+
+// };
+
+// Person5.prototype.calcAge = function() { // make all instances inherit a calcage method
+// 	var age = new date().getFullYear - this.yearOfBirth;
+
+// };
+
+// var john5 = new Person5('john', 1990, 'teacher');
+
+
+
+
+//ES6
+
+class Person6 //class deceleration this is an object we attach methods to an object there not hoisted so you can only use classes after they have been declared.Second we can only add methods to classes and not property
+
+{
+	constructor(name,yearOfBirth,job) { //creates a constructor
+		this.name = name;
+		this.yearOfBirth = yearOfBirth;
+		this.job = job;
+	}
+
+	calcage() { //adds method which is inherited when a new instance is called
+		var age = new date().getFullYear(); - this.yearOfBirth;
+	}
+	static greeting() { //can only call this method in the script as it's attached to the class definition
+
+		console.log('Hey there');
+	}
+}
+
+
+const john6  = new Person6('john', 1990,'teacher');
+
+Person6.greeting();
+
+
+//implementing inheritance from one class to another: Classes with subclasses
+
+//person constructor and athlete subclass which inherits from the person subclass
+
+
+//super class
+
+var Person5 = function Person(name, yearOfBirth, job) { //written as function expression
+
+	this.name = name;
+	this.yearOfBirth = yearOfBirth;
+	this.job = job;
+
+};
+
+Person5.prototype.calcAge = function() { // make all instances inherit a calcage method
+	var age = new Date().getFullYear() - this.yearOfBirth;
+	console.log(age);
+
+};
+
+var john5 = new Person5('john', 1990, 'teacher');
+
+
+
+var Athlete5 = function(name, yearOfBirth, job, olympicGamesAttended, medalHaul) {
+
+	Person5.call(this, name, yearOfBirth, job); // sets this to athlete when new athlete is called
+	this.olympicGamesAttended = olympicGamesAttended;
+	this.medalHaul = medalHaul;
+
+};
+
+Athlete5.prototype = Object.create(Person5.prototype); //shares prototype between the both
+
+//object.create allows us to manual set the prototype of object and we want prototype of athlete to be prototype of person so they become connected.
+
+//set methods on prototype of athlete 5
+
+Athlete5.prototype.wonMedal = function() {
+
+	this.medals++; // increase by 1
+	console.log(this.medals);
+
+};
+
+
+var johnAthlete5 = new Athlete5('john', 1990, 'swimmer', 3 , 10);
+
+johnAthlete5.calcAge(); // works as all instances of person can inherit this method and all instances of athlete person 5 is super class and
+johnAthlete5.wonMedal();
+
+
+
+
+
+
+
+
+
 
 
 
