@@ -318,7 +318,7 @@ the this keyword of the function they are written in. So we say they have a LEXI
 
 
 
- //4. Destructuring gives us an easy way to extract data from a data structure like an object or an array
+//4. Destructuring gives us an easy way to extract data from a data structure like an object or an array
 
 
 
@@ -445,7 +445,7 @@ the this keyword of the function they are written in. So we say they have a LEXI
 
 
 
- //4. The spread operator very convenient way to expand elements of array in function calls and arguments
+//4. The spread operator very convenient way to expand elements of array in function calls and arguments
 
 
 
@@ -545,65 +545,65 @@ the this keyword of the function they are written in. So we say they have a LEXI
 
 
 
-//ES5
+// //ES5
 
 
-function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+// function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
 
-	lastName === undefined ? lastName = ' Smith': lastName = lastName // if lastName undefined change to smith as a default parameter
-	nationality === undefined ? nationality = 'British': nationality = nationality; // if nationality undefined change to british as a default parameter
+// 	lastName === undefined ? lastName = ' Smith': lastName = lastName // if lastName undefined change to smith as a default parameter
+// 	nationality === undefined ? nationality = 'British': nationality = nationality; // if nationality undefined change to british as a default parameter
 
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.yearOfBirth = yearOfBirth;
-	this.nationality = nationality;
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.yearOfBirth = yearOfBirth;
+// 	this.nationality = nationality;
 
-}
+// }
 
-//es6
-
-
-function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'Welsh') { // call default parameters in the declaration
-
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.yearOfBirth = yearOfBirth;
-	this.nationality = nationality;
-
-	}
-
-	var john = new SmithPerson('John', 1990); // only called 2 property because we used 2 parameters
-
-	console.log(john);
-
-	var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
-
-	console.log(emily);
+// //es6
 
 
+// function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'Welsh') { // call default parameters in the declaration
 
-// MAPS JS objects can be used as hash map we match string keys to arbitrary values. we mapped values to them but we mapped objects we were limited to strings . But now we use maps and can attach any primitive value to them strings numbers booleans and functions or objects as keys.
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.yearOfBirth = yearOfBirth;
+// 	this.nationality = nationality;
 
-// you can iterate through maps but you can't through objects for each method is in the prototype function of the map function constructor maps inherit that method and can use it
-//ES5
+// 	}
 
-const question = new Map();
+// 	var john = new SmithPerson('John', 1990); // only called 2 property because we used 2 parameters
 
-question.set('question', 'What is the offical name of the leatest major javascript version?'); // key, value
-question.set(1, 'ES5');
-question.set(2, 'ES6');
-question.set(3, 'ES2015');
-question.set(4, 'ES7');
-question.set('correct', 3);
-question.set(true, 'correct answer');
-question.set(false, 'Wrong');
+// 	console.log(john);
 
-// console.log(question);
+// 	var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
+
+// 	console.log(emily);
 
 
 
-console.log(question.get('question')); // get the key
-// console.log(question.size); // gets the size
+// // MAPS JS objects can be used as hash map we match string keys to arbitrary values. we mapped values to them but we mapped objects we were limited to strings . But now we use maps and can attach any primitive value to them strings numbers booleans and functions or objects as keys.
+
+// // you can iterate through maps but you can't through objects for each method is in the prototype function of the map function constructor maps inherit that method and can use it
+// //ES5
+
+// const question = new Map();
+
+// question.set('question', 'What is the offical name of the leatest major javascript version?'); // key, value
+// question.set(1, 'ES5');
+// question.set(2, 'ES6');
+// question.set(3, 'ES2015');
+// question.set(4, 'ES7');
+// question.set('correct', 3);
+// question.set(true, 'correct answer');
+// question.set(false, 'Wrong');
+
+// // console.log(question);
+
+
+
+// console.log(question.get('question')); // get the key
+// // console.log(question.size); // gets the size
 // console.log(question.delete(4)); // get the key
 // // question.clear(); //clear everything
 
@@ -669,28 +669,28 @@ console.log(question.get('question')); // get the key
 
 //ES6
 
-class Person6 //class deceleration this is an object we attach methods to an object there not hoisted so you can only use classes after they have been declared.Second we can only add methods to classes and not property
+// class Person6 //class deceleration this is an object we attach methods to an object there not hoisted so you can only use classes after they have been declared.Second we can only add methods to classes and not property
 
-{
-	constructor(name,yearOfBirth,job) { //creates a constructor
-		this.name = name;
-		this.yearOfBirth = yearOfBirth;
-		this.job = job;
-	}
+// {
+// 	constructor(name,yearOfBirth,job) { //creates a constructor
+// 		this.name = name;
+// 		this.yearOfBirth = yearOfBirth;
+// 		this.job = job;
+// 	}
 
-	calcage() { //adds method which is inherited when a new instance is called
-		var age = new date().getFullYear(); - this.yearOfBirth;
-	}
-	static greeting() { //can only call this method in the script as it's attached to the class definition
+// 	calcage() { //adds method which is inherited when a new instance is called
+// 		var age = new date().getFullYear(); - this.yearOfBirth;
+// 	}
+// 	static greeting() { //can only call this method in the script as it's attached to the class definition
 
-		console.log('Hey there');
-	}
-}
+// 		console.log('Hey there');
+// 	}
+// }
 
 
-const john6  = new Person6('john', 1990,'teacher');
+// const john6  = new Person6('john', 1990,'teacher');
 
-Person6.greeting();
+// Person6.greeting();
 
 
 //implementing inheritance from one class to another: Classes with subclasses
@@ -700,50 +700,47 @@ Person6.greeting();
 
 //super class
 
-var Person5 = function Person(name, yearOfBirth, job) { //written as function expression
+// var Person5 = function Person(name, yearOfBirth, job) { //written as function expression
 
-	this.name = name;
-	this.yearOfBirth = yearOfBirth;
-	this.job = job;
+// 	this.name = name;
+// 	this.yearOfBirth = yearOfBirth;
+// 	this.job = job;
 
-};
+// };
 
-Person5.prototype.calcAge = function() { // make all instances inherit a calcage method
-	var age = new Date().getFullYear() - this.yearOfBirth;
-	console.log(age);
+// Person5.prototype.calcAge = function() { // make all instances inherit a calcage method
+// 	var age = new Date().getFullYear() - this.yearOfBirth;
+// 	console.log(age);
 
-};
+// };
 
-var john5 = new Person5('john', 1990, 'teacher');
+// var john5 = new Person5('john', 1990, 'teacher');
 
+// var Athlete5 = function(name, yearOfBirth, job, olympicGamesAttended, medalHaul) {
 
+// 	Person5.call(this, name, yearOfBirth, job); // sets this to athlete when new athlete is called
+// 	this.olympicGamesAttended = olympicGamesAttended;
+// 	this.medalHaul = medalHaul;
 
-var Athlete5 = function(name, yearOfBirth, job, olympicGamesAttended, medalHaul) {
+// };
 
-	Person5.call(this, name, yearOfBirth, job); // sets this to athlete when new athlete is called
-	this.olympicGamesAttended = olympicGamesAttended;
-	this.medalHaul = medalHaul;
+// Athlete5.prototype = Object.create(Person5.prototype); //shares prototype between the both essentially connects two function constructors ES5 way
 
-};
+// //object.create allows us to manual set the prototype of object and we want prototype of athlete to be prototype of person so they become connected.
 
-Athlete5.prototype = Object.create(Person5.prototype); //shares prototype between the both
+// //set methods on prototype of athlete 5
 
-//object.create allows us to manual set the prototype of object and we want prototype of athlete to be prototype of person so they become connected.
+// Athlete5.prototype.wonMedal = function() {
 
-//set methods on prototype of athlete 5
+// 	this.medalHaul++; // increase by 1
+// 	console.log(this.medalHaul);
 
-Athlete5.prototype.wonMedal = function() {
+// };
 
-	this.medals++; // increase by 1
-	console.log(this.medals);
+// var johnAthlete5 = new Athlete5('john', 1990, 'swimmer', 3 , 10);
 
-};
-
-
-var johnAthlete5 = new Athlete5('john', 1990, 'swimmer', 3 , 10);
-
-johnAthlete5.calcAge(); // works as all instances of person can inherit this method and all instances of athlete person 5 is super class and
-johnAthlete5.wonMedal();
+// johnAthlete5.calcAge(); // works as all instances of person can inherit this method and all instances of athlete person 5 is super class and
+// johnAthlete5.wonMedal();
 
 
 
@@ -752,23 +749,133 @@ johnAthlete5.wonMedal();
 
 
 
+// //ES6: prototype inheritance
+
+// class Person7
+
+// {
+// 	constructor(name,yearOfBirth,job) { //creates a constructor
+// 		this.name = name;
+// 		this.yearOfBirth = yearOfBirth;
+// 		this.job = job;
+// 	}
+
+// 	calcage() { //adds method which is inherited when a new instance is called
+// 		var age = new Date().getFullYear() - this.yearOfBirth;
+// 		console.log(age);
+// 	}
+// }
+
+// class Athlete6 extends Person7 {
+// 	constructor(name,yearOfBirth,job,olympicGamesAttended,medalHaul) {
+// 		super(name,yearOfBirth,job)// call super class person function constructor
+// 		this.olympicGamesAttended = olympicGamesAttended; // adds athlete constructors
+// 		this.medalHaul = medalHaul;
+// 	}
+
+// 	wonMedal() {
+// 		this.medalHaul++;
+// 		console.log(this.medalHaul);
+// 	}
+// }
+
+// var johnAthlete6 = new Athlete6('john', 1990, 'swimmer', 3 , 10);
+
+// johnAthlete6.calcage(); // works as all instances of person can inherit this method and all instances of athlete person 5 is super class and
+// johnAthlete6.wonMedal();
 
 
 
 
 
+//
+class Element { //superClass
+    constructor(name, buildYear) {
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
+
+class Park extends Element {
+    constructor(name, buildYear, area, numberOfTrees) { // property's of park
+        super(name, buildYear)
+        this.area = area; // KM2
+        this.numberOfTrees = numberOfTrees;
+    }
+    treeDensity() {
+        const density = this.numberOfTrees / this.area;
+        console.log(`${this.name} has a tree density of ${density} trees per square KM`); // normally you would return this statement
+    }
+}
+
+
+class Street extends Element {
+    constructor(name, buildYear, length, size = 3) { // size auto's to 3 unless specified
+            super(name, buildYear);
+            this.length = length;
+            this.size = size;
+        }
+        //data model defined
+    classifyStreet() {
+        const classification = new Map();
+        classification.set(1, 'tiny');
+        classification.set(2, 'small');
+        classification.set(3, 'normal');
+        classification.set(4, 'big');
+        classification.set(5, 'huge');
+        console.log(`${this.name}, was built in ${this.buildYear} and is a ${classification.get(this.size)} street`)
+    }
+}
+
+//create some objects this create the objects of the park
+const allParks = [new Park('green park', 1987, 0.2, 215), new Park('red park', 1894, 2.9, 3005), new Park('blue park', 1953, 0.4, 949)];
+
+const allStreets = [new Street('street1', 1999, 1.1, 4), new Street('street2', 1800, 2.2, 1), new Street('street3', 1850, 3.3, 5), new Street('street4', 1875, 4.4)];
+
+//write one function for each report and pass in our data in each function
+
+
+function calcArray(array) {
+
+    const sum = array.reduce((prev, cur, index) => prev + cur, 0); //callback function access to cur val index and previous val reduce combines all figures on an array into one number
+
+    return [sum, sum / array.length];
+}
+
+function reportParks(parksArray) {
 
 
 
+    console.log('----------parks report---------------------');
+
+    //density each park object call tree density method loop through
+    parksArray.forEach(el => el.treeDensity()); // loop through each park object and run tree density
+    //average park age external function to calc avearge and total for any array thats passed into it reusable
+    const ages = parksArray.map(el => new Date().getFullYear() - el.buildYear); //loop through all current elements of park array and calculate age
+    const [totalAge, averageAge] = calcArray(ages); // destructing
+
+    console.log(`Our ${parksArray.length} parks have an average of ${averageAge}`);
+
+    //which park has more than 1000 trees getIndex find index of an array element which satisfy our callback function
+
+    const index = parksArray.map(el => el.numberOfTrees).findIndex(el => el >= 1000) //get all number of tree into an array return an array and do find index
+    console.log(`${parksArray[index].name} has more than 1000 trees`);
+}
+
+function reportStreets(streetsArrays) {
+
+
+    console.log('----------Streets report---------------------');
+
+    //Total and average length of town's streets
+    const [totalLength, avgLength] = calcArray(streetsArrays.map(el => el.length));
+    console.log(`Our ${streetsArrays.length} streets jabe a total length of ${totalLength} km, with an average street length of ${avgLength}`)
+        //classify sizes
+
+    streetsArrays.forEach(el => el.classifyStreet());
+}
 
 
 
-
-
-
-
-
-
-
-
-
+reportParks(allParks);
+reportStreets(allStreets);
