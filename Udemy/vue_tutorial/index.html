@@ -24,9 +24,56 @@
 
 <div id="appTwo">
     <h1>Dom Interaction</h1>
+    <h1 v-once>{{titleTwo}}</h1>
     <p>{{sayHello()}} - <a v-bind:href="link" target="_blank"> KHWS</p> </a>
+    <hr>
+    <p v-html="finshedLink">{{finshedLink}}</p>
 
 </div>
+
+
+<div id="exercise">
+<h1>assignment 1</h1>
+   <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+    <p>VueJS is pretty cool - {{name}} {{age}}</p>
+    <!-- 2) Output your age, multiplied by 3 -->
+    <p>My age multiplied by 3 is {{age * 3}}</p>
+    <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+    <p> A random float will appear here {{randomFloat()}}</p>
+    <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+    <div>
+        <img v-bind:src="imageLink" style="width:200px;height:200px">
+    </div>
+    <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+    <div>
+        <input type="text" v-bind:value="name">
+    </div>
+</div>
+
+
+<h1>Listening to events</h1>
+
+<div id="appEvent">
+<button v-on:click="increase">click me</button>
+<p>{{counter}}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
