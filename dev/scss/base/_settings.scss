@@ -8,6 +8,10 @@ $yellow: #FFDD00;
 $grey:#293d3d;
 $purple: #b600ff;
 $blue:#0052cc;
+$pink:#ff5a9d;
+$purpleOpac: rgba(182,0,255,0.5);
+$whiteOpacity:rgba(255,255,255, 0.5);
+$blockYellow: #4f2a5e;
 
 
 //font-size
@@ -43,7 +47,21 @@ $desktop: new-breakpoint(min-width 850px);
   font-style: normal;
 }
 
-$spray: "PhillySans-Regular";
+
+@font-face {
+  font-family: 'Mission_Script';
+  src: url('../fonts/Mission-Script.eot');
+  src: url('../fonts/Mission-Script.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Mission-Script.woff2') format('woff2'),
+    url('../fonts/Mission-Script.woff') format('woff'),
+    url('../fonts/Mission-Script.ttf') format('truetype'),
+    url('../fonts/Mission-Script.svg#Mission-Script') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$spray: "Mission_Script";
 
 
 

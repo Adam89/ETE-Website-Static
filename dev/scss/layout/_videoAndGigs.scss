@@ -2,29 +2,42 @@
     @include outer-container(100%);
     @include align-items(stretch);
     @include display(flex);
-    background-color: shade($purple, 50%);
-    padding: em(10px);
     @include media($phone-landscape-large) {
         @include display(block);
     }
     &__videoPane {
         @include span-columns(8);
-        background-color: green;
-        height: 100%;
+        font-size: 0px;
         @include media($phone-landscape-large) {
+            @include span-columns(12);
+        }
+        &--hero {
             @include span-columns(12);
         }
     }
     &__gigs {
-        @include span-columns(4);
+        @include span-columns(4, block-collapse);
+        background-color: $pink;
         text-align: center;
         @include media($phone-landscape-large) {
             @include span-columns(12);
             padding: 20px;
         }
         img {
-            height: 100%;
-            width: 100%;
+            margin: auto;
+            width: 65%;
+            height: auto;
+        }
+    }
+    &__dogImage {
+        position: relative;
+        img {
+            margin: auto;
+            width: 65%;
+            height: auto;
         }
     }
 }
+
+
+

@@ -1,5 +1,4 @@
 .wrapper {
-    background: shade($purple, 50%);
     @include outer-container();
     margin: 0;
     white-space: nowrap;

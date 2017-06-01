@@ -1,6 +1,6 @@
 .social {
     @include outer-container(100%);
-    background-color: shade($purple, 50%);
+    background: $whiteOpacity;
     height: 100%;
     padding: em(10px);
     @include media($phone-landscape-large) {

@@ -1,6 +1,12 @@
 .moreVideos {
-    @include outer-container();
-    &__tiles {
-        @include span-columns(3);
+    @include outer-container(100%);
+    &__list {
+        @include span-columns(8);
+        &--tiles {
+            @include span-columns(2);
+        }
+    }
+    &__dogImage {
+		@include span-columns(4, block-collapse);
     }
 }

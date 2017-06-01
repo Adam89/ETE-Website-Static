@@ -1,6 +1,9 @@
 .description {
 	@include outer-container(100%);
-	&--copy {
-		@include span-columns(12);
+	&__copy {
+		@include span-columns(6, block-collapse);
+	}
+	&__albumImage {
+		@include span-columns(6);
 	}
 }
