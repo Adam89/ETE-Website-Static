@@ -3,29 +3,50 @@
     @include align-items(stretch);
     @include display(flex);
     background-color: $white;
+    @include media($phone-portrait-large) {
+        @include display(block);
+    }
+    @include media($phone-landscape-large) {
+        @include display(block);
+    }
     &__copy {
         text-align: center;
         position: relative;
         h1 {
-            margin: 5px;
+            margin: 10px;
             font-size: em(65px);
             color: $black;
             @include media($tabletPortrait) {
-                // font-size: em(40px);
+                font-size: em(40px);
             }
             @include media($phone-portrait-large) {
-                // font-size: em(25px);
+                font-size: em(28px);
             }
         }
         p {
             text-align: center;
             font-size: 25px;
             margin: 10px 10px;
+              @include media($phone-landscape-large) {
+                font-size: 18px;
+              }
         }
         &--abs {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            @include media($phone-portrait-large) {
+                display: block;
+                position: relative;
+                top: 0;
+                transform: none;
+            }
+            @include media($phone-landscape-large) {
+                display: block;
+                position: relative;
+                top: 0;
+                transform: none;
+            }
         }
     }
     &__albumImage {

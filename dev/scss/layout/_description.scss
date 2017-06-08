@@ -1,9 +1,21 @@
 .description {
-	@include outer-container(100%);
-	&__copy {
-		@include span-columns(6, block-collapse);
-	}
-	&__albumImage {
-		@include span-columns(6);
-	}
+    @include outer-container(100%);
+    &__copy {
+        @include span-columns(6, block-collapse);
+        @include media($phone-portrait-large) {
+            @include span-columns(12);
+        }
+        @include media($phone-landscape-large) {
+            @include span-columns(12);
+        }
+    }
+    &__albumImage {
+        @include span-columns(6, block-collapse);
+        @include media($phone-portrait-large) {
+            @include span-columns(12, block-collapse);
+        }
+        @include media($phone-landscape-large) {
+            @include span-columns(12, block-collapse);
+        }
+    }
 }
