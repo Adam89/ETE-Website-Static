@@ -8,16 +8,26 @@ handling events in react has 2 steps
 declare event handler
 pass the event handler to the element that we want to monitor for events
 
-onChange is a prop or property acess to the change event react specific
+onChange is a prop or property access to the change event react specific
+value is a prop or property access that sets the value
 ---------------------------------------------
 
+--------------- State ------------------------------
 
-
---------------- State ---------------
 is a plain JS object that is used to record and react to a user's event. Each class based component has it's own state object.When a component changes the render function runs and the state changes.
 
+Controlled field is a form element whose value is set by the state value only ever changes when state changes
+
+functional components don't have access to state
+functional components can take in class based components in the JSX
 
 ---------------------------------------------
+
+--------------- Downwards data flow ------------------------------
+
+only the most parent component in the application should be responsible for fetching data
+
+------------------------------------------------------------
 */
 
 // const SearchBar = () => { //functional component as its a function
@@ -37,8 +47,9 @@ class SearchBar extends Component { //SearchBar class component JS object define
 	render() { // this is a method on a class return some JSX
 		return (
 			<div>
-				<input onChange={event => this.setState({ term: event.target.value})} />
-
+				<input
+					value={this.state.term} // value provided by state controlled component
+					onChange={event => this.setState({ term: event.target.value})} />
 			</div>
 		);
 	}

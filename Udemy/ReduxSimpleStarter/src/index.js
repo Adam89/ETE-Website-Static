@@ -28,23 +28,46 @@ A class component is used when we want a component to have internal record keepi
 
 */
 
-import React from 'react'; // go find library and assign it to React variable this library knows how to work with render react components and nest them
+import React, {Component} from 'react'; // go find library and assign it to React variable this library knows how to work with render react components and nest them
 import ReactDOM from 'react-dom'; // react dom is library for rendering JSX to the DOM
+import YTSearch from 'youtube-api-search'; //package
 
 import SearchBar from './components/searchbar';
 
+
 const youtube_Api_Key = 'AIzaSyBsj2cI1pDVoTdWrojxyp6AHhQ5Sm6wxtQ';
 
-const App = () => { // type of component this is a class not an instance
 
-	return (
-		<div>
-			<SearchBar/>
-		</div>
-	);
+// YTSearch({key:youtube_Api_Key, term: 'surfboards'}, function(data){
+// 	console.log(data);
+// }); // fetched youtube array of surfboards
+
+
+// const App = () => { // type of functional component this is a class not an instance
+
+// 	return (
+// 		<div>
+// 			<SearchBar/>
+// 		</div>
+// 	);
+// }
+
+
+
+class App extends Component { // app needs to keep track of list of videos so it will recording the videos on its state. data will change over time hence why it needs to be on the state
+	render() {
+		return (
+			<div>
+				<SearchBar/>
+			</div>
+		);
+	}
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+
+
+
+ReactDOM.render(<App />, document.querySelector('.container')); // insert to dom
 
 
 
