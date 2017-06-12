@@ -28,6 +28,7 @@ a {
     @include links($white, $grey, $blue, $yellow);
     letter-spacing: em(2px);
     cursor: pointer;
+    @include display(block);
 }
 video {
   width: 100%    !important;

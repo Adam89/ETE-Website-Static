@@ -2,11 +2,25 @@
     @include outer-container(100%);
     &__list {
         @include span-columns(8);
+         @include media($phone-portrait-large) {
+            @include span-columns(12);
+        }
+        @include media($phone-landscape-large) {
+            @include span-columns(12);
+        }
         &--tiles {
             @include span-columns(2);
         }
     }
     &__dogImage {
-		@include span-columns(4, block-collapse);
+		@include span-columns(4);
+        @include media($phone-portrait-large) {
+            @include span-columns(12);
+        }
+        @include media($phone-landscape-large) {
+            @include span-columns(12);
+        }
     }
 }
+
+

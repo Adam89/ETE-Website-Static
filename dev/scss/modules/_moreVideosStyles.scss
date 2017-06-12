@@ -3,6 +3,14 @@
     width: 100%;
     @include align-items(stretch);
     @include display(flex);
+     @include media($phone-portrait-large) {
+            @include span-columns(12);
+            @include display(block);
+        }
+        @include media($phone-landscape-large) {
+            @include span-columns(12);
+
+        }
     &__list {
         ul {
             li {
@@ -38,9 +46,21 @@
             height: auto;
         }
         &--centerDog {
-                        position: absolute;
+            position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            @include media($phone-portrait-large) {
+            position:relative;
+            top:0px;
+            display: block;
+            transform: none;
+        }
+        @include media($phone-landscape-large) {
+            position:relative;
+            top:0px;
+            display: block;
+            transform: none;
+        }
         }
     }
 }

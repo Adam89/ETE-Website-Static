@@ -14,7 +14,7 @@ function social() {
 
                 $("#someFrame").attr("src", $(this).attr("href"));
                 $('html, body').animate({
-                    scrollTop: $(".videoAndGigs").offset().top
+                    scrollTop: $(".videoAndGigs__gigs").offset().top
                 }, 800) -25;
             });
         });
