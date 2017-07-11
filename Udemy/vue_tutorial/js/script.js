@@ -18,6 +18,16 @@
 
 //v-model on one hand output the name in the input field and update the name value in my VUE instance.
 
+//v-if can be added to any element you can bind it to a condition or property which resolves to a boolean removes all elements even nested elements like spans
+
+//v-else will automatically refer to latest v-if in front of it
+
+//v-else-if
+
+// v-show allows you to hide stuff in the dom not remove
+
+// v-for allows you to loop through arrays and objects but keep in mind that some bugs may appear as v for finds it hard to keep track of new additions to an array unless there is a unique key set with v-bind:key (look out for items updating in the wrong places)
+
 //$event in the dom allows us to pass the event as a second argument
 
 
@@ -212,58 +222,129 @@
 //         }
 //     });
 
+// new Vue({
+//         el: '#appCSSTwo',
+//         data: {
+//             color: 'green',
+//             width: 100,
+//             height: 100
+//         },
+//         computed: {
+//         	myStyle: function() {
+//         		return {
+//         			backgroundColor: this.color,
+//         			width: this.width +'px', //adjust the width
+//         			height: this.height + 'px'
+//         		};
+//         	}
+//         }
+//     });
+
+
+
+
+
+
+
+
+//exercise 4
+ /*
+
 new Vue({
-        el: '#appCSSTwo',
-        data: {
-            color: 'green',
-            width: 100,
-            height: 100
-        },
-        computed: {
-        	myStyle: function() {
-        		return {
-        			backgroundColor: this.color,
-        			width: this.width +'px', //adjust the width
-        			height: this.height + 'px'
-        		};
-        	}
-        }
-    });
+  el: '#exercise',
+  data: {
+    effectClasses: {
+        hightlight: false,
+        shrink: true
+    },
+    float: 'float', // stores css classes
+    blue: 'blue',
+    text: 'text-colour',
+    userClass: '', // two way binding v-model between input and div array
+    isVisible: true,
+    myStyle: {
+        width:'100px',
+        height: '150px',
+        backgroundColor: 'gray'
+    },
+    progressBar: {
+        width: '0px',
+        backgroundColor: 'red'
+    }
+  },
+  methods: {
+    startEffect: function() {
+        var vm = this;
+        setInterval(function() {
+            vm.effectClasses.highlight = !vm.effectClasses.highlight;
+            vm.effectClasses.shrink = !vm.effectClasses.shrink;
+        }, 500);
+    },
+    startProgress: function() {
+        var vm = this; // acess to vue instance
+        var width = 0;
+        setInterval(function() {
+            width = width + 10;
+            vm.progressBar.width = width + 'px';
+            if(width === 200) {
+                width = 0;
+            }
+        },500);
+    }
+  }
+});
+
+
+
+*/
 
 
 
 
+//Dom interaction conditionals and lists
+
+
+
+// new Vue ({
+//     el: '#appDom',
+//     data: {
+//         show:true // linked to V-IF
+//     }
+// });
 
 
 
 
+// new Vue ({
+//     el: '#appList',
+//     data: {
+//         ingredients:['meat', 'Fruit', 'Cookies'], // linked to v for
+//         persons: [
+//         {name: 'Max', age:27, color:'red'},
+//         {name: 'Anna', age:'unknown', color:'blue'}
+//         ]
+//     }
+// });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//exercise 4 dom interaction conditionals and lists
+new Vue({
+  el: '#exerciseDom',
+  data: {
+    isShown: true,
+    array: ['Max', 'Anna', 'Chris', 'Manu'],
+    myObject: {
+      title: 'Lord of the Rings',
+      author: 'J.R.R. Tolkiens',
+      books: '3'
+    },
+    testData: {
+      name: 'TESTOBJECT',
+      id: 10,
+      data: [1.67, 1.33, 0.98, 2.21] // created template
+    }
+  }
+});
 
 
 

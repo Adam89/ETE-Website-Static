@@ -2,14 +2,14 @@
 
 //Everything is an object
 
-// primitives : numbers , strings , booleans , undefined , null 
+// primitives : numbers , strings , booleans , undefined , null
 // Everything else : arrays, functions, objects, dates, wrappers for numbers, strings, booleans IS AN OBJECT
 
-/* 
+/*
 
 OOP Objects interact with one another through methods and properties
     used to store data, structure applications into modules and keeping clean code
-    
+
     constructor or prototype : this allows us to create as many objects as we want objects being instances of the person object
 
     person {
@@ -22,7 +22,7 @@ OOP Objects interact with one another through methods and properties
     inheritance: is when one object is based on another when one object gets access to another objects method and property's Athlete gets all of persons properties and method plus it's own
 
     athlete {
-    olympics: 
+    olympics:
     olympicMedals:
     allowedOlympics()
 
@@ -46,7 +46,7 @@ OOP Objects interact with one another through methods and properties
 */
 
 
-//lecture 1 : function constructor 
+//lecture 1 : function constructor
 
 // lecture 2: the prototype chain in the console
 
@@ -72,7 +72,7 @@ OOP Objects interact with one another through methods and properties
 // };
 
 // function constructors always start with capitals person function constructor is an instance of the object function constructor
-// var Person = function(name, yearOfBirth, job) {  
+// var Person = function(name, yearOfBirth, job) {
 //     this.name = name;
 //     this.yearOfBirth = yearOfBirth;
 //     this.job = job;
@@ -84,9 +84,9 @@ OOP Objects interact with one another through methods and properties
 //     };
 // //prototype property of our function constructor
 
-// Person.prototype.lastName = 'Smith'; // attaches smith to all instances of person 
+// Person.prototype.lastName = 'Smith'; // attaches smith to all instances of person
 
-// var john = new Person('John', 1980, 'developer'); // this is how we create new objects using constructor function these objects are instances of the person object the term is instantiation 
+// var john = new Person('John', 1980, 'developer'); // this is how we create new objects using constructor function these objects are instances of the person object the term is instantiation
 // console.log(john.calculateAge());
 
 // //proto this is the prototype of john object is the prototype property of person function constructor
@@ -178,7 +178,7 @@ OOP Objects interact with one another through methods and properties
 // //functions
 
 // var age = 27; // primitive
-// var obj = { 
+// var obj = {
 //  name: 'adam',
 //  city: 'lisbon',
 // };
@@ -194,16 +194,16 @@ OOP Objects interact with one another through methods and properties
 // console.log(obj.city);
 
 // lecture 5: first class functions: passing functions as arguments functions are also objects
-/* 
+/*
     A function is an instance of the object type;
     A function behaves like any other object;
     We can store functions in a variable;
     We can pass a function as an argument to another function
-    we can return a function from a function 
+    we can return a function from a function
 
     because of all this we say we have first class functions
 
-    what we have done 
+    what we have done
     created generic function ARRAYCALC which loops over the YEARS input array then we gave it a function as an input which is used calculate based on each element array. Then we create many different function to pass through the original function. More modular to split out each function.
 
     we can pass functions around like variables, we wrote cleaner reusable code.
@@ -310,7 +310,7 @@ OOP Objects interact with one another through methods and properties
 //     };
 // }
 
-// var retirementUs = retirementCheck(66); // store the above function in this variable the inner function is able to use variables despite popping off the execution stack 
+// var retirementUs = retirementCheck(66); // store the above function in this variable the inner function is able to use variables despite popping off the execution stack
 // retirementUs(1990);
 // retirementCheck(66)(1990); // different way of calling the same function above
 
@@ -366,7 +366,7 @@ OOP Objects interact with one another through methods and properties
 //     job: 'designer',
 // };
 
-// john.presentation.call(emily, 'friendly', 'afternoon'); // this is called method borrowing as you have to set this var first which is emily so on presentation method this becomes emily 
+// john.presentation.call(emily, 'friendly', 'afternoon'); // this is called method borrowing as you have to set this var first which is emily so on presentation method this becomes emily
 
 // // john.presentation.apply(emily, ['formal', 'afternoon']); // same way regarding this but just accepts array as second argument
 
@@ -425,7 +425,7 @@ OOP Objects interact with one another through methods and properties
 
 //coding challenge Quiz
 
-/*build function constructor called question to describe question. A question should include the 
+/*build function constructor called question to describe question. A question should include the
 
 A) question itself
 
@@ -435,7 +435,7 @@ C) correct answer (i would use a number for this)
 
 2) create a couple of questions using the constructor
 
-3. store them all inside an array 
+3. store them all inside an array
 
 4. select one random question and log it on the console together with the possible answers (each question should have a number) hint: write a method for the questions object for this task
 
@@ -532,7 +532,7 @@ function(() { // Immediately invoked function changes scope and makes my game co
 
         var chooseQuestionRandomly = questions[number]; // returns one question object but with answers and correct answers
 
-        chooseQuestionRandomly.displayQuestion(); // displays one question but the displayQuestion method loops through answers 
+        chooseQuestionRandomly.displayQuestion(); // displays one question but the displayQuestion method loops through answers
 
         var answer = prompt('please select the correct answer');
 
