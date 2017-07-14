@@ -40,6 +40,111 @@
 
 // data is not reactive vue will update the page when any of it's data properties are updated
 
+/*
+
+---------------------------------------------------
+
+VUE instance
+
+---------------------------------------------------
+ el, data, methods, computed make up a vue instance.The vue instance is the middle man between dom and business logic in the data property or methods.
+
+ VM = vue model
+
+
+ var vm1 = new Vue  can acess methods and data from outside using vm2.title for example
+
+ var vm2 = new Vue
+
+
+only creates watches for every object passed in the vue constructor instance with getter setters. However, we can add new property from outside but vue won't act on them as usual due to them being outside the vue instance.
+
+$el refers to html code of instance the html element
+
+$data object which holds data propertys $data.title another way to acess data
+
+$refs place ref="myButton" key on any html element then in vue instance you can manipulate the refs $refs.mybutton.innerText = " change me " can also use outside of the instance.
+
+
+Be careful when using $refs outside of instance as its not part of vue generated template so could be overridden
+
+
+$mount(#domAppEl); allows use to pass the element where you want to pass the vue instance too same as el: #domAppEl this is useful is dom elements isn't created yet.
+
+ var vm3 = new Vue ({
+
+  template: '<h1>hello world</h1>'
+
+  template is a new term and creates its own dom template within the vue instance which can be passed to the vm3.$mount(#domAppEl);
+
+  another way is to
+
+  vm3.$mount(); create instance off screen
+  document.getElementById('#domAppEl').appendChild(vm3.$el) $el stores template this way is not that common
+
+ })
+
+---------------------------------------------------
+
+Components
+
+---------------------------------------------------
+
+
+vue.component('helloAppDomEl', { creates a reusable component pass there own selector hello is not a html 5 element first argument is html element your own one
+  template: '<h1>Hello!</h1>'
+})
+
+ var vm3 = new Vue ({
+  el: hello, // replace template of every hello element
+  template: '<h1>hello world</h1>'
+  )}
+
+
+ limitations are syntax highlighting and struggling to writing multi line.
+
+
+ vue JS creates a virtual dom from all your objects and watches for changes when changes happen to parts of virtual dom those changes are updated to relevant parts in real dom
+
+ change detections with watchers
+
+
+ A component extends the vue instance can also includes methods computed watchers etc
+
+ vur.component('my-cmp', { // this configures components globally
+    data:function() { data object in a component needs to be a function which returns an object to make sure we are not interfering in our data so each component has its own data i.e button will change their own specific area in dom data function gets executed for each component
+    return {
+        status: 'critical'
+        }
+    },
+    template: '<p>Server Status: {{status}}</p>'
+ })
+
+
+ var cmp = {
+    data: function() {
+     return {
+        status: 'critical'
+        };
+    },
+ }
+
+ new Vue({
+    el:'#app',
+    components: {
+        'my-cmp': cmp // this allows us to specify local components they are only usable in this instance
+    }
+ })
+
+ <div id="app">
+    <my-cmp></my-cmp>
+ </div>
+/*
+
+
+
+
+
 
 // new Vue({
 // 	el: '#app', // always a string
@@ -328,39 +433,88 @@ new Vue({
 
 
 //exercise 4 dom interaction conditionals and lists
+// new Vue({
+//   el: '#exerciseDom',
+//   data: {
+//     isShown: true,
+//     array: ['Max', 'Anna', 'Chris', 'Manu'],
+//     myObject: {
+//       title: 'Lord of the Rings',
+//       author: 'J.R.R. Tolkiens',
+//       books: '3'
+//     },
+//     testData: {
+//       name: 'TESTOBJECT',
+//       id: 10,
+//       data: [1.67, 1.33, 0.98, 2.21] // created template
+//     }
+//   }
+// });
+
+/*
+
+---------------------------------------------------
+
+Vue Lifecycle
+
+lifecycle hooks are not part of the methods object they are function registered on the root object Vue
+---------------------------------------------------
+
+*/
 new Vue({
-  el: '#exerciseDom',
-  data: {
-    isShown: true,
-    array: ['Max', 'Anna', 'Chris', 'Manu'],
-    myObject: {
-      title: 'Lord of the Rings',
-      author: 'J.R.R. Tolkiens',
-      books: '3'
+    el: '#appLife',
+    data: {
+        title: 'The VueJS Instance'
     },
-    testData: {
-      name: 'TESTOBJECT',
-      id: 10,
-      data: [1.67, 1.33, 0.98, 2.21] // created template
+    beforeCreate: function() { // this is hook
+        console.log('beforeCreate()');
+
+    },
+    created: function() { // when vue instance is created
+        console.log('created()');
+    },
+    beforeMount: function() { // before vue instance is mounted to dpm
+        console.log('beforeMount()');
+    },
+    mounted: function() { // when instance is mounted to real dom
+        console.log('mounted()');
+    },
+    beforeUpdate: function() { // executed before element in the dom is updated
+        console.log('beforeUpdate()');
+    },
+    updated: function() { // executed when element in dom is updated
+        console.log('updated()');
+    },
+    beforeDestroy: function() { // executed just before vue instance is destroyed
+        console.log('beforeDestroy()');
+    },
+    destroyed: function() { // executed just before vue instance is destroyed
+        console.log('destroyed()');
+    },
+    methods: {
+      destroy: function() {
+        this.$destroy(); // this refers to vue instance
+      }
     }
-  }
 });
 
 
 
 
 
+/*
 
+---------------------------------------------------
 
+VUE CLI & Workflows
 
+Single file templates
 
+vue cli allows us to fetch vue JS templates
 
+---------------------------------------------------
 
-
-
-
-
-
+*/
 
 
 

@@ -15,7 +15,7 @@
 new Vue({
 
     el: '#app',
-    data: {
+    data: { // can also pass data objects from outside the instance to as a value
         playerHealth: 100,
         monsterHealth: 100,
         gameIsRunning: false,
