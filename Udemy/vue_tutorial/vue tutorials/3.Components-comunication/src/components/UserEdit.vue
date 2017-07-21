@@ -1,15 +1,10 @@
-<template>
-    <div class="component">
-        <h3>You may edit the User here</h3>
-        <p>Edit me!</p>
-    </div>
+<template src="../HTML/userEdit.html">
+
 </template>
 
-<script>
+<script  src="../JS/userEdit.js">
 </script>
 
-<style scoped>
-    div {
-        background-color: lightgreen;
-    }
+<style src="../CSS/userEdit.css" scoped>
+
 </style>
