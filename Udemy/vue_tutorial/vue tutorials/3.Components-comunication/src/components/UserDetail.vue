@@ -12,6 +12,8 @@
 
 <script>
 
+import {eventBus} from '../main'; // import from main js file
+
 export default { // this component is going to receive some data (PROPS from outside props is an object) unidirectional data flow from top to bottom
 	props: {
 		name:{
@@ -30,6 +32,11 @@ export default { // this component is going to receive some data (PROPS from out
 			this.name="tom";
 			this.$emit('nameReset', this.name); // emit custom event each vue instance first arg name of the event second arg the data (updated name) need to add to template on parent component first arg property second arg event this allows us to pass data to parent component from child
 		}
+	},
+	created() { // new life cycle hook setup listener to the event
+		eventBus.$on('ageWasEditied', (ageProps) =>  { // this is a way of passing data between two childs without going via parent
+			this.propUserAge = age;
+		});
 	}
 }
 </script>
