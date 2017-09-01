@@ -52,6 +52,7 @@
     //     }
     // }
 
+    // answer = Hello!Hi!Hey!
 
 
 
@@ -67,7 +68,7 @@
 
         function second() {
             var c = 'Hey!';
-            third()
+            third();
         }
     }
 
@@ -75,6 +76,8 @@
         var d = 'John';
         console.log(a + b + c + d);
     }
+
+    answer = b and c not defined
     */
 
 

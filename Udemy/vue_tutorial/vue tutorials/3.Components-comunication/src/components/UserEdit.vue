@@ -6,7 +6,7 @@
 
 <script  src="../JS/userEdit.js">
 
-import {eventBus} from '../main'; // import from main js file
+// import { eventBus } from '../main'; // import from main js file have to add this in multiple places
 
 </script>
 

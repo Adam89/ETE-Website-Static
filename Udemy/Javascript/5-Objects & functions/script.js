@@ -460,7 +460,7 @@ expert leval
 
 
 
-function(() { // Immediately invoked function changes scope and makes my game code below private great use case
+// function(() { // Immediately invoked function changes scope and makes my game code below private great use case
 
 
 
@@ -549,5 +549,5 @@ function(() { // Immediately invoked function changes scope and makes my game co
     nextQuestion();
 
 
-})();
+// })();
 

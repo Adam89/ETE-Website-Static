@@ -34,8 +34,8 @@ export default { // this component is going to receive some data (PROPS from out
 		}
 	},
 	created() { // new life cycle hook setup listener to the event
-		eventBus.$on('ageWasEditied', (ageProps) =>  { // this is a way of passing data between two childs without going via parent
-			this.propUserAge = age;
+		eventBus.$on('ageWasEditied', (ageProps) =>  { // this is a way of passing data between two childs without going via parent listens to events emmited which i stored in the event bus
+			this.propUserAge = ageProps;
 		});
 	}
 }
